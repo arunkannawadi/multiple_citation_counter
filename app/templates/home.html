@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiple-citation counter</title>
+</head>
+<body>
+<h1>Multiple-citation counter</h1>
+<form action="shortenurl" method="post">
+    <label for="url">Enter your Google Scholar URL (mandatory)</label><br>
+    <input type="url" name="url" value="" required><br>
+    <label for="max_paper_count">Limit analysis to top </label>
+    <input type="max_paper_count" name="max_paper_count" value="5">
+    most-cited papers.<br>
+    (Leave it blank to fetch all papers.)<br><br>
+    <label for="shortcode">Enter your Scraper API key (optional, but recommended)</label><br>
+    <input type="text" name="shortcode" value=""><br>
+    <input type="submit" value="Submit">
+</form>
+
+<h2>Create a free ScraperAPI account</h2>
+A free ScraperAPI account supports 40 Google Scholar clicks per month.
+<br>
+<ul>
+    <li>
+        <a href="https://www.scraperapi.com/">Create a free account</a> without providing personal and payment information.<br>
+    </li>
+    <li>
+        Copy the API key from your account dashboard
+        <a href="https://dashboard.scraperapi.com/dashboard">https://dashboard.scraperapi.com/dashboard</a>.<br>
+    </li>
+</ul>
+</body>
+</html>
