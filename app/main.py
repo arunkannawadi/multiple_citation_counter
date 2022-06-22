@@ -1,7 +1,12 @@
-from flask import Flask
+from flask import Flask, Response
+import time
  
 app = Flask(__name__)
  
 @app.route("/")
 def home_view():
-    return "<h1>Welcome to Geeks for Geeks</h1>"
+    def inner():
+        for x in range(100):
+            time.sleep(1)
+            yield '%s<br/>\n' % x
+    return Response(inner(), mimetype='text/html')  # text/html is required for most browsers to show the partial page immediately
